@@ -1,0 +1,106 @@
+# Local development stack for Tidewright Orchestrator.
+#
+# Only `api` publishes a host port (127.0.0.1:8080). db and redis are reachable
+# on the compose network only. No container_name is set anywhere so several
+# copies of the stack can run side by side with different COMPOSE_PROJECT_NAME
+# values (CI does this).
+name: tidewright
+
+x-app: &app
+  build:
+    context: .
+    dockerfile: Dockerfile
+  image: tidewright-orchestrator:dev
+  volumes:
+    - ./:/app
+  environment: &app-env
+    TW_ENV: dev
+    DATABASE_URL: postgresql+psycopg://tidewright:tidewright-demo@db:5432/tidewright
+    REDIS_URL: redis://redis:6379/0
+    TW_LOG_LEVEL: INFO
+    TW_LOG_FORMAT: json
+    TW_ADMIN_TOKEN: tw_demo_admin_localdev0000000000
+  depends_on: &app-deps
+    db:
+      condition: service_healthy
+    redis:
+      condition: service_healthy
+
+services:
+  db:
+    image: postgres:16.4-alpine
+    environment:
+      POSTGRES_USER: tidewright
+      POSTGRES_PASSWORD: tidewright-demo
+      POSTGRES_DB: tidewright
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tidewright -d tidewright"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  redis:
+    image: redis:7.4-alpine
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  api:
+    <<: *app
+    environment:
+      <<: *app-env
+      TW_SERVICE_NAME: api
+    command: ["uvicorn", "app.api.main:app", "--host", "0.0.0.0", "--port", "8080", "--reload"]
+    ports:
+      - "127.0.0.1:8080:8080"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/healthz', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  worker:
+    <<: *app
+    environment:
+      <<: *app-env
+      TW_SERVICE_NAME: worker
+    command: ["python", "-m", "app.worker"]
+
+  scheduler:
+    <<: *app
+    environment:
+      <<: *app-env
+      TW_SERVICE_NAME: scheduler
+    command: ["python", "-m", "app.scheduler"]
+
+  mockhook:
+    <<: *app
+    depends_on: []
+    environment:
+      TW_SERVICE_NAME: mockhook
+      MOCKHOOK_PORT: "9000"
+      MOCKHOOK_LOG: /app/var/mockhook/deliveries.jsonl
+    command: ["python", "-m", "mockhook"]
+
+  # `make test` runs this one-off container. Separate database and redis index
+  # so tests never touch dev data.
+  tests:
+    <<: *app
+    profiles: ["tests"]
+    environment:
+      <<: *app-env
+      TW_ENV: test
+      TW_SERVICE_NAME: tests
+      TW_LOG_FORMAT: text
+      TW_LOG_LEVEL: WARNING
+      DATABASE_URL: postgresql+psycopg://tidewright:tidewright-demo@db:5432/tidewright_test
+      REDIS_URL: redis://redis:6379/15
+    command: ["pytest"]
+
+volumes:
+  pgdata:

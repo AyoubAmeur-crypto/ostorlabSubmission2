@@ -1,0 +1,20 @@
+{
+  "scanned_at": "2026-10-12T02:00:00Z",
+  "open": [
+    {
+      "port": 23,
+      "protocol": "tcp",
+      "service": "telnet"
+    },
+    {
+      "port": 443,
+      "protocol": "tcp",
+      "service": "https"
+    },
+    {
+      "port": 3389,
+      "protocol": "tcp",
+      "service": "rdp"
+    }
+  ]
+}

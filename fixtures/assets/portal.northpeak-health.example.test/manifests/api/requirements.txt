@@ -1,0 +1,3 @@
+driftwood-auth==0.8.0
+fathomdb-orm==1.4.3
+-r requirements-base.txt

@@ -1,0 +1,14 @@
+{
+  "url": "https://cdn.lumen-retail.example.test/",
+  "status": 200,
+  "recorded_at": "2026-10-12T02:10:00Z",
+  "headers": {
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "Content-Security-Policy": "default-src 'self'; frame-ancestors 'none'",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Server": "nginx",
+    "Content-Type": "text/html; charset=utf-8"
+  }
+}

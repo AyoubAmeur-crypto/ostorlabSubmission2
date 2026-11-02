@@ -1,0 +1,2 @@
+driftwood_auth==0.8.1
+gullwing-xml==2.1.0

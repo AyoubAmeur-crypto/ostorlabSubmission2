@@ -1,0 +1,30 @@
+{
+  "recorded_at": "2026-10-12T02:10:00Z",
+  "endpoints": [
+    {
+      "port": 443,
+      "protocols": [
+        "TLSv1",
+        "TLSv1.1",
+        "TLSv1.2"
+      ],
+      "ciphers": [
+        "AES128-SHA",
+        "DES-CBC3-SHA",
+        "RC4-SHA"
+      ],
+      "certificate": {
+        "subject": "CN=legacy-intranet.northpeak-health.example.test",
+        "issuer": "CN=legacy-intranet.northpeak-health.example.test",
+        "not_before": "2025-03-01T00:00:00Z",
+        "not_after": "2027-03-01T00:00:00Z",
+        "san": [
+          "intranet.northpeak.internal"
+        ],
+        "self_signed": true,
+        "key_type": "rsa",
+        "key_bits": 1024
+      }
+    }
+  ]
+}

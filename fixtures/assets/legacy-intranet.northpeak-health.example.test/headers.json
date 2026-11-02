@@ -1,0 +1,10 @@
+{
+  "url": "https://legacy-intranet.northpeak-health.example.test/",
+  "status": 200,
+  "recorded_at": "2026-10-12T02:10:00Z",
+  "headers": {
+    "Server": "Microsoft-IIS/8.5",
+    "X-Powered-By": "ASP.NET",
+    "Content-Type": "text/html"
+  }
+}

@@ -1,0 +1,368 @@
+{
+  "source": "Tidewright advisory feed (fictional, test data)",
+  "generated_at": "2026-10-13T00:00:00Z",
+  "advisories": [
+    {
+      "id": "TWSA-2025-0077",
+      "ecosystem": "pypi",
+      "package": "marlin-csv",
+      "affected": [
+        "<0.9.3"
+      ],
+      "fixed_in": "0.9.3",
+      "severity": "moderate",
+      "summary": "Formula injection in exported cells",
+      "published": "2025-06-02"
+    },
+    {
+      "id": "TWSA-2025-0098",
+      "ecosystem": "npm",
+      "package": "harborlight-router",
+      "affected": [
+        "<2.8.4"
+      ],
+      "fixed_in": "2.8.4",
+      "severity": "moderate",
+      "summary": "Open redirect through protocol-relative Location values",
+      "published": "2025-07-15"
+    },
+    {
+      "id": "TWSA-2025-0104",
+      "ecosystem": "npm",
+      "package": "anchorlog-core",
+      "affected": [
+        "<5.2.0"
+      ],
+      "fixed_in": "5.2.0",
+      "severity": "low",
+      "summary": "Log injection through unescaped newlines",
+      "published": "2025-07-30"
+    },
+    {
+      "id": "TWSA-2025-0112",
+      "ecosystem": "npm",
+      "package": "tidyquill-template",
+      "affected": [
+        "<0.9.12"
+      ],
+      "fixed_in": "0.9.12",
+      "severity": "low",
+      "summary": "Template sandbox exposes the constructor of built-ins",
+      "published": "2025-08-11"
+    },
+    {
+      "id": "TWSA-2025-0122",
+      "ecosystem": "pypi",
+      "package": "fathomdb-orm",
+      "affected": [
+        "<1.4.2"
+      ],
+      "fixed_in": "1.4.2",
+      "severity": "high",
+      "summary": "SQL injection through order_by on raw columns",
+      "published": "2025-08-20"
+    },
+    {
+      "id": "TWSA-2025-0131",
+      "ecosystem": "pypi",
+      "package": "tidepool-cache",
+      "affected": [
+        "<1.9.5"
+      ],
+      "fixed_in": "1.9.5",
+      "severity": "moderate",
+      "summary": "Cache key collision can serve one tenant's response to another",
+      "published": "2025-09-03"
+    },
+    {
+      "id": "TWSA-2025-0141",
+      "ecosystem": "npm",
+      "package": "harborlight-router",
+      "affected": [
+        ">=3.0.0,<3.1.7"
+      ],
+      "fixed_in": "3.1.7",
+      "severity": "high",
+      "summary": "Path traversal in static route matching",
+      "published": "2025-09-18"
+    },
+    {
+      "id": "TWSA-2025-0150",
+      "ecosystem": "pypi",
+      "package": "keelhaul-http",
+      "affected": [
+        "<3.2"
+      ],
+      "fixed_in": "3.2",
+      "severity": "high",
+      "summary": "Request smuggling with duplicate Content-Length headers",
+      "published": "2025-09-29"
+    },
+    {
+      "id": "TWSA-2025-0158",
+      "ecosystem": "npm",
+      "package": "seaglass-fetch",
+      "affected": [
+        ">=1.0.0,<1.3.4",
+        ">=2.0.0,<2.0.2"
+      ],
+      "fixed_in": "2.0.2",
+      "severity": "high",
+      "summary": "Proxy credentials forwarded on cross-origin redirects",
+      "published": "2025-10-07"
+    },
+    {
+      "id": "TWSA-2025-0166",
+      "ecosystem": "npm",
+      "package": "bollard-yaml",
+      "affected": [
+        ">=2.0.0,<2.3.1"
+      ],
+      "fixed_in": "2.3.1",
+      "severity": "moderate",
+      "summary": "Unbounded alias expansion exhausts memory",
+      "published": "2025-10-21"
+    },
+    {
+      "id": "TWSA-2025-0171",
+      "ecosystem": "pypi",
+      "package": "saltmarsh-crypto",
+      "affected": [
+        "<3.3.0"
+      ],
+      "fixed_in": "3.3.0",
+      "severity": "high",
+      "summary": "Timing side channel in MAC comparison",
+      "published": "2025-11-04"
+    },
+    {
+      "id": "TWSA-2025-0179",
+      "ecosystem": "pypi",
+      "package": "coralgrid-tasks",
+      "affected": [
+        ">=1.0,<1.2.4"
+      ],
+      "fixed_in": "1.2.4",
+      "severity": "moderate",
+      "summary": "Task arguments logged in clear text",
+      "published": "2025-11-12"
+    },
+    {
+      "id": "TWSA-2025-0187",
+      "ecosystem": "npm",
+      "package": "kelpie-sanitize",
+      "affected": [
+        "<1.10.0"
+      ],
+      "fixed_in": "1.10.0",
+      "severity": "moderate",
+      "summary": "Mixed-case event handler attributes bypass the filter",
+      "published": "2025-11-25"
+    },
+    {
+      "id": "TWSA-2025-0194",
+      "ecosystem": "npm",
+      "package": "pierwatch-metrics",
+      "affected": [
+        "==4.1.0"
+      ],
+      "fixed_in": "4.1.1",
+      "severity": "moderate",
+      "summary": "Metrics endpoint enabled without authentication",
+      "published": "2025-12-02"
+    },
+    {
+      "id": "TWSA-2025-0203",
+      "ecosystem": "npm",
+      "package": "quayside-jwt",
+      "affected": [
+        "<1.6.2"
+      ],
+      "fixed_in": "1.6.2",
+      "severity": "high",
+      "summary": "Audience claim not verified for array audiences",
+      "published": "2025-12-16"
+    },
+    {
+      "id": "TWSA-2025-0210",
+      "ecosystem": "pypi",
+      "package": "shoalwise-jinja-ext",
+      "affected": [
+        "<0.6.0"
+      ],
+      "fixed_in": "0.6.0",
+      "severity": "low",
+      "summary": "Autoescape disabled in included templates",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "TWSA-2026-0003",
+      "ecosystem": "pypi",
+      "package": "estuary-sftp",
+      "affected": [
+        "<2.4.1"
+      ],
+      "fixed_in": "2.4.1",
+      "severity": "high",
+      "summary": "Host key not checked on reconnect",
+      "published": "2026-01-08"
+    },
+    {
+      "id": "TWSA-2026-0009",
+      "ecosystem": "pypi",
+      "package": "brinepack",
+      "affected": [
+        ">=2.0.0a1,<2.0.0"
+      ],
+      "fixed_in": "2.0.0",
+      "severity": "moderate",
+      "summary": "Pre-release builds deserialize untrusted payloads",
+      "published": "2026-01-20"
+    },
+    {
+      "id": "TWSA-2026-0014",
+      "ecosystem": "npm",
+      "package": "tidemark-uuid",
+      "affected": [
+        "<2.0.0"
+      ],
+      "fixed_in": "2.0.0",
+      "severity": "low",
+      "summary": "Predictable identifiers when crypto is unavailable",
+      "published": "2026-02-03"
+    },
+    {
+      "id": "TWSA-2026-0017",
+      "ecosystem": "npm",
+      "package": "quayside-jwt",
+      "affected": [
+        ">=2.0.0-alpha.1,<2.0.0"
+      ],
+      "fixed_in": "2.0.0",
+      "severity": "moderate",
+      "summary": "Pre-release builds accept tokens with alg none",
+      "published": "2026-02-10"
+    },
+    {
+      "id": "TWSA-2026-0022",
+      "ecosystem": "pypi",
+      "package": "ballast-config",
+      "affected": [
+        "==1.0.0",
+        "==1.0.1"
+      ],
+      "fixed_in": "1.0.2",
+      "severity": "moderate",
+      "summary": "Environment overrides read from world-writable paths",
+      "published": "2026-03-02"
+    },
+    {
+      "id": "TWSA-2026-0028",
+      "ecosystem": "npm",
+      "package": "wharfside-cookie",
+      "affected": [
+        "<0.7.1"
+      ],
+      "fixed_in": "0.7.1",
+      "severity": "moderate",
+      "summary": "Cookie attributes not escaped",
+      "published": "2026-03-17"
+    },
+    {
+      "id": "TWSA-2026-0031",
+      "ecosystem": "pypi",
+      "package": "lighthouse-pdf",
+      "affected": [
+        "<4.0.0.post2"
+      ],
+      "fixed_in": "4.0.0.post2",
+      "severity": "low",
+      "summary": "External fonts fetched while rendering",
+      "published": "2026-04-01"
+    },
+    {
+      "id": "TWSA-2026-0034",
+      "ecosystem": "npm",
+      "package": "lanternfish-xml",
+      "affected": [
+        ">=4.0.0,<4.2.1"
+      ],
+      "fixed_in": "4.2.1",
+      "severity": "high",
+      "summary": "External entity expansion enabled by default",
+      "published": "2026-04-14"
+    },
+    {
+      "id": "TWSA-2026-0040",
+      "ecosystem": "pypi",
+      "package": "driftwood-auth",
+      "affected": [
+        "<0.8.2"
+      ],
+      "fixed_in": "0.8.2",
+      "severity": "critical",
+      "summary": "Password reset tokens are predictable",
+      "published": "2026-05-05"
+    },
+    {
+      "id": "TWSA-2026-0045",
+      "ecosystem": "pypi",
+      "package": "gullwing-xml",
+      "affected": [
+        "<2.1.0"
+      ],
+      "fixed_in": "2.1.0",
+      "severity": "high",
+      "summary": "Quadratic blowup in entity parsing",
+      "published": "2026-05-26"
+    },
+    {
+      "id": "TWSA-2026-0051",
+      "ecosystem": "npm",
+      "package": "mooringline-session",
+      "affected": [
+        "<0.5.0"
+      ],
+      "fixed_in": "0.5.0",
+      "severity": "critical",
+      "summary": "Session id not rotated after login",
+      "published": "2026-06-09"
+    },
+    {
+      "id": "TWSA-2026-0056",
+      "ecosystem": "npm",
+      "package": "gangplank-cli",
+      "affected": [
+        "<1.0.3"
+      ],
+      "fixed_in": "1.0.3",
+      "severity": "low",
+      "summary": "Temporary files created world-readable",
+      "published": "2026-06-30"
+    },
+    {
+      "id": "TWSA-2026-0060",
+      "ecosystem": "npm",
+      "package": "fjordline-icons",
+      "affected": [
+        "<3.0.0"
+      ],
+      "fixed_in": "3.0.0",
+      "severity": "low",
+      "summary": "SVG sprites allow script injection",
+      "published": "2026-07-21"
+    },
+    {
+      "id": "TWSA-2026-0066",
+      "ecosystem": "pypi",
+      "package": "fathomdb-orm",
+      "affected": [
+        ">=1.5.0,<1.5.3"
+      ],
+      "fixed_in": "1.5.3",
+      "severity": "moderate",
+      "summary": "Connection pool leaks the previous session's search_path",
+      "published": "2026-08-25"
+    }
+  ]
+}

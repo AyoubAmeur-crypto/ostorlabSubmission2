@@ -1,0 +1,29 @@
+{
+  "recorded_at": "2026-10-12T02:10:00Z",
+  "endpoints": [
+    {
+      "port": 443,
+      "protocols": [
+        "TLSv1.2",
+        "TLSv1.3"
+      ],
+      "ciphers": [
+        "TLS_AES_128_GCM_SHA256",
+        "TLS_AES_256_GCM_SHA384",
+        "ECDHE-ECDSA-AES128-GCM-SHA256"
+      ],
+      "certificate": {
+        "subject": "CN=checkout.lumen-retail.example.test",
+        "issuer": "Example Test CA R2",
+        "not_before": "2026-08-07T12:00:00Z",
+        "not_after": "2026-11-05T12:00:00Z",
+        "san": [
+          "checkout.lumen-retail.example.test"
+        ],
+        "self_signed": false,
+        "key_type": "ecdsa",
+        "key_bits": 256
+      }
+    }
+  ]
+}

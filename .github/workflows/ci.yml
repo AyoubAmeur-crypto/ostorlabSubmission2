@@ -1,0 +1,73 @@
+# Illustrative CI: the same make targets developers run, on a disposable
+# compose stack per job. Owner: Ravi Menon.
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      COMPOSE_PROJECT_NAME: tw-lint-${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image
+        run: docker compose build tests
+      - name: Ruff
+        run: make lint
+
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      COMPOSE_PROJECT_NAME: tw-test-${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image
+        run: docker compose build tests
+      - name: Test suite
+        run: make test PYTEST_ARGS="-q --maxfail=20"
+      - name: Migrations apply to an empty dev database
+        run: |
+          docker compose up -d --wait db redis
+          make migrate
+      - name: Seed smoke test (small and deterministic)
+        run: |
+          docker compose run --rm api python -m seed.generate --seed 42
+          docker compose run --rm api python -m seed.generate --seed 42 --reset --findings 600
+      - name: Service logs on failure
+        if: failure()
+        run: docker compose logs --no-color --tail=300
+      - name: Tear down
+        if: always()
+        run: docker compose --profile tests down -v --remove-orphans
+
+  bench:
+    # Nightly numbers only; never blocks a merge.
+    if: github.event_name == 'push'
+    needs: test
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    continue-on-error: true
+    env:
+      COMPOSE_PROJECT_NAME: tw-bench-${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose build api
+      - run: docker compose up -d --wait db redis && make migrate
+      - run: docker compose run --rm api python -m seed.generate --seed 42 --findings-scale 34
+      - run: make bench | tee bench.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bench-${{ github.sha }}
+          path: bench.txt
+      - if: always()
+        run: docker compose down -v --remove-orphans

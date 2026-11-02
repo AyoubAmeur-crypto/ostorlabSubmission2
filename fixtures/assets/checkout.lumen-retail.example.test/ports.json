@@ -1,0 +1,21 @@
+{
+  "scanned_at": "2026-10-12T02:00:00Z",
+  "open": [
+    {
+      "port": 443,
+      "protocol": "tcp",
+      "service": "https"
+    },
+    {
+      "port": 8443,
+      "protocol": "tcp",
+      "service": "https-alt"
+    },
+    {
+      "port": 6379,
+      "protocol": "tcp",
+      "service": "redis",
+      "banner": "-NOAUTH Authentication required."
+    }
+  ]
+}

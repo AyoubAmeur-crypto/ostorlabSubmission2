@@ -1,0 +1,20 @@
+{
+  "scanned_at": "2026-10-12T02:00:00Z",
+  "open": [
+    {
+      "port": 443,
+      "protocol": "tcp",
+      "service": "https"
+    },
+    {
+      "port": 8443,
+      "protocol": "tcp",
+      "service": "https-alt"
+    },
+    {
+      "port": 11211,
+      "protocol": "udp",
+      "service": "memcached"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "url": "https://inventory-api.lumen-retail.example.test/",
+  "status": 200,
+  "recorded_at": "2026-10-12T02:10:00Z",
+  "headers": {
+    "Strict-Transport-Security": "max-age=63072000",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Type": "application/json",
+    "Server": "inventory-gw/2.4.1"
+  }
+}

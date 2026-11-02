@@ -1,0 +1,5 @@
+fhir:
+  base_path: /r4
+  upstream:
+    url: https://ehr.northpeak-health.example.test
+    service_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJERU1PLWZoaXItY2xpZW50In0.DEMOsignatureDEMOsignature0000

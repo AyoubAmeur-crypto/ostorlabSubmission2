@@ -1,0 +1,10 @@
+{
+  "scanned_at": "2026-10-12T02:00:00Z",
+  "open": [
+    {
+      "port": 443,
+      "protocol": "tcp",
+      "service": "https"
+    }
+  ]
+}

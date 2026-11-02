@@ -1,0 +1,13 @@
+{
+  "url": "https://shop.lumen-retail.example.test/",
+  "status": 200,
+  "recorded_at": "2026-10-12T02:10:00Z",
+  "headers": {
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Server": "nginx",
+    "Content-Type": "text/html; charset=utf-8",
+    "X-Powered-By": "Lanternworks/5.1"
+  }
+}

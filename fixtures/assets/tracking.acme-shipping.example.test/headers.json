@@ -1,0 +1,14 @@
+{
+  "url": "https://tracking.acme-shipping.example.test/",
+  "status": 200,
+  "recorded_at": "2026-10-12T02:10:00Z",
+  "headers": {
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Server": "nginx/1.24.0",
+    "Content-Type": "text/html; charset=utf-8",
+    "X-Powered-By": "Express"
+  }
+}

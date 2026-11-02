@@ -1,0 +1,33 @@
+# Runtime dependencies. Every package is pinned, including transitive ones,
+# so images built on different laptops are identical. Bump deliberately and
+# note the change in CHANGELOG.md.
+
+# web
+fastapi==0.115.6
+starlette==0.41.3
+uvicorn==0.32.1
+click==8.1.7
+h11==0.14.0
+anyio==4.7.0
+sniffio==1.3.1
+
+# data
+SQLAlchemy==2.0.36
+greenlet==3.1.1
+psycopg[binary]==3.2.3
+psycopg-binary==3.2.3
+alembic==1.14.0
+Mako==1.3.8
+MarkupSafe==3.0.2
+pydantic==2.10.4
+pydantic-core==2.27.2
+annotated-types==0.7.0
+typing_extensions==4.12.2
+redis==5.2.1
+tzdata==2024.2
+
+# webhook dispatch (local mock receiver only)
+httpx==0.28.1
+httpcore==1.0.7
+idna==3.10
+certifi==2024.12.14

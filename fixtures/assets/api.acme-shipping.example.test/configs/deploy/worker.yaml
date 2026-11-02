@@ -1,0 +1,5 @@
+worker:
+  concurrency: 4
+  queue: shipments
+database_url: postgresql://shipments:DEMO-pg-Passw0rd@db.internal.acme-shipping.example.test:5432/shipments
+log_level: info

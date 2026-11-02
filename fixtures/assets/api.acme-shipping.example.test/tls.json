@@ -1,0 +1,28 @@
+{
+  "recorded_at": "2026-10-12T02:10:00Z",
+  "endpoints": [
+    {
+      "port": 443,
+      "protocols": [
+        "TLSv1",
+        "TLSv1.2"
+      ],
+      "ciphers": [
+        "ECDHE-RSA-AES128-GCM-SHA256",
+        "ECDHE-RSA-AES256-GCM-SHA384"
+      ],
+      "certificate": {
+        "subject": "CN=api.acme-shipping.example.test",
+        "issuer": "Example Test CA R2",
+        "not_before": "2026-10-14T00:00:00Z",
+        "not_after": "2027-01-12T23:59:59Z",
+        "san": [
+          "api.acme-shipping.example.test"
+        ],
+        "self_signed": false,
+        "key_type": "ecdsa",
+        "key_bits": 256
+      }
+    }
+  ]
+}

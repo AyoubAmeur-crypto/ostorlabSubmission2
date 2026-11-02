@@ -1,0 +1,30 @@
+{
+  "workload": {
+    "findings": 500,
+    "own_active_rules": 500,
+    "own_expired_rules": 500,
+    "foreign_rules": 2000,
+    "repeat": 10
+  },
+  "original_pr": {
+    "median_ms": 102.162,
+    "max_ms": 108.189,
+    "candidate_queries": 1,
+    "candidate_rows": 3000,
+    "predicate_calls": 125250,
+    "suppressed": 500,
+    "webhooks_remaining": 500,
+    "audit_transitions": 0
+  },
+  "fixed": {
+    "median_ms": 13.352,
+    "max_ms": 23.947,
+    "candidate_queries": 1,
+    "candidate_rows": 500,
+    "predicate_calls": 500,
+    "suppressed": 500,
+    "webhooks_remaining": 0,
+    "audit_transitions": 500
+  },
+  "speedup": 7.65
+}

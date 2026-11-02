@@ -1,0 +1,6 @@
+# pinned with pip-compile
+fathomdb-orm==1.4
+brinepack==2.0.0rc1
+keelhaul-http==3.2.post1  # local patch release
+marlin_csv[fast]==0.9.1 ; python_version >= "3.11"
+requests-shim>=2.0

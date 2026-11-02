@@ -1,0 +1,15 @@
+{
+  "scanned_at": "2026-10-12T02:00:00Z",
+  "open": [
+    {
+      "port": 443,
+      "protocol": "tcp",
+      "service": "https"
+    },
+    {
+      "port": 5432,
+      "protocol": "tcp",
+      "service": "postgresql"
+    }
+  ]
+}

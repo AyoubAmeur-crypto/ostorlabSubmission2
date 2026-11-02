@@ -1,0 +1,22 @@
+{
+  "scanned_at": "2026-10-12T02:00:00Z",
+  "open": [
+    {
+      "port": 21,
+      "protocol": "tcp",
+      "service": "ftp",
+      "banner": "220 acme-ftp ready"
+    },
+    {
+      "port": 22,
+      "protocol": "tcp",
+      "service": "ssh",
+      "banner": "SSH-2.0-acme"
+    },
+    {
+      "port": 443,
+      "protocol": "tcp",
+      "service": "https"
+    }
+  ]
+}

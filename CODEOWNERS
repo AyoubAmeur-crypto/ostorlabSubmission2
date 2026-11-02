@@ -1,0 +1,51 @@
+# Review routing. The last matching pattern wins.
+# Handles are internal directory names (tidewright.example.test).
+
+*                       @lhaddad
+
+# core: shared foundations and the data model
+/app/core/              @lhaddad
+/app/models/            @lhaddad @sbrandao
+/app/schemas/           @lhaddad @twrona
+/migrations/            @lhaddad @rmenon
+/tests/conftest.py      @lhaddad
+/tests/factories.py     @lhaddad
+/docs/architecture.md   @lhaddad
+/docs/adr/              @lhaddad
+
+# components
+/app/api/               @twrona
+/app/worker/            @aowusu
+/app/scheduler/         @aowusu
+/app/plugins/           @karakawa
+/fixtures/              @karakawa
+/app/ingest/            @sbrandao
+# Written by Yusuf Demir (intern, summer 2026); exports maintained by Mei Lin.
+/app/reporting/         @meilin @lhaddad
+/mockhook/              @meilin
+/app/cli.py             @meilin @aowusu
+/seed/                  @meilin
+/scripts/               @meilin
+
+# tests follow their component
+/tests/api/             @twrona
+/tests/worker/          @aowusu
+/tests/scheduler/       @aowusu
+/tests/plugins/         @karakawa
+/tests/ingest/          @sbrandao
+/tests/reporting/       @meilin
+/tests/cli/             @meilin
+/tests/seed/            @meilin
+/tests/integration/     @lhaddad @aowusu
+
+# platform
+/Dockerfile             @rmenon
+/docker-compose.yml     @rmenon
+/Makefile               @rmenon
+/requirements*.txt      @rmenon @lhaddad
+/.github/               @rmenon
+/docs/runbook.md        @rmenon
+
+# product-facing docs
+/docs/requests/         @npetrov @hlefevre
+/docs/api.md            @twrona
